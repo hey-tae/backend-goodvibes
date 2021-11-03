@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+<h1>Time to Learn Back End</h1>
+<h2>enter some words of encouragement to help you get through</h2>
+<form action="/quotes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+</form>
+<h2>Quotes</h2>
+<ul class="quotes">
+    <!-- loop through the quotes -->
+    <% for(var i=0; i < quotes.length; i++) {%> 
+        <li class="quotes">
+            <!-- display the name from each iteration -->
+            <span> <%= quotes[i].name %></span>
+            <!-- display the quote from each iteration -->
+            <span><%= quotes[i].quote%></span>
+        </li>
+        <% } %>
+</ul>
+
+<section class="invade">
+
+    <h2>Good Vibes Only</h2>
+    <p>Add some good vibes when Sad Tae comes around </p>
+
+    <button id="update-button">Love Invasion</button>
+
+</section>
+
+<section class="delete">
+    <h2>Sad Tae</h2>
+    <p>Get Rid of Sad Tae</p>
+    <button id="delete-button">Delete the Bad Vibes</button>
+</section>
+
+<script src="/main.js"></script>
+
+</body>
+</html>
